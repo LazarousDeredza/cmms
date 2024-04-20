@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
+</head>
+<body>
+<section layout:fragment="header">
+    <h1>
+        Dashboard
+        <small>Control panel</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+    </ol>
+</section>
+<div layout:fragment="content">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-aqua">
+                <div class="inner">
+                    <h3>150</h3>
+
+                    <p>New Orders</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-green">
+                <div class="inner">
+                    <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                    <p>Completed Orders</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-yellow">
+                <div class="inner">
+                    <h3>44</h3>
+
+                    <p>Services Requests</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-red">
+                <div class="inner">
+                    <h3>65</h3>
+
+                    <p>Unique Requests</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <!-- ./col -->
+    </div>
+    <!-- /.row -->
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <section class="col-lg-6 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+            <div class="nav-tabs-custom">
+                <!-- Tabs within a box -->
+                <ul class="nav nav-tabs pull-right">
+                    <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
+                    <li><a href="#sales-chart" data-toggle="tab">Orders</a></li>
+                    <li class="pull-left header"><i class="fa fa-inbox"></i> Work Orders</li>
+                </ul>
+                <div class="tab-content no-padding">
+                    <!-- Morris chart - Sales -->
+                    <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
+                    <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
+                </div>
+            </div>
+            <!-- /.nav-tabs-custom -->
+        </section>
+        
+        
+        <!-- /.Left col -->
+           <section class="col-lg-6 connectedSortable">
+  <!-- Custom tabs (Charts with tabs) -->
+  <div class="nav-tabs-custom">
+    <!-- Tabs within a box -->
+    <ul class="nav nav-tabs pull-right">
+      <li class="active"><a href="#revenue-chart" data-toggle="tab">Histogram</a></li>
+      <li><a href="#sales-chart" data-toggle="tab">Orders</a></li>
+      <li class="pull-left header"><i class="fa fa-inbox"></i> Work Orders</li>
+    </ul>
+    <div class="tab-content no-padding">
+      <!-- Histogram chart -->
+      <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;">
+        <!-- Place your histogram chart code here -->
+      <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;">
+  <!-- Fluctuation chart -->
+  <div id="fluctuation-chart"></div>
+</div>
+
+<script>
+  // Sample data for the chart
+  var data = [
+    { x: 'Jan', y: 10 },
+    { x: 'Feb', y: 20 },
+    { x: 'Mar', y: 15 },
+    { x: 'Apr', y: 25 },
+    { x: 'May', y: 18 },
+    { x: 'Jun', y: 30 },
+    { x: 'Jul', y: 22 },
+    { x: 'Aug', y: 28 },
+    { x: 'Sep', y: 20 },
+    { x: 'Oct', y: 25 },
+    { x: 'Nov', y: 15 },
+    { x: 'Dec', y: 12 }
+  ];
+
+  // Set the options for the chart
+  var options = {
+    chart: {
+      type: 'line',
+      height: 350,
+      toolbar: {
+        show: false
+      }
+    },
+    series: [{
+      name: 'Fluctuations',
+      data: data
+    }],
+    xaxis: {
+      type: 'category'
+    }
+  };
+
+  // Create the chart
+  var chart = new ApexCharts(document.querySelector("#fluctuation-chart"), options);
+  chart.render();
+</script>
+      </div>
+      <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
+    </div>
+  </div>
+  <!-- /.nav-tabs-custom -->
+</section>
+
+        
+    
+        <!-- right col (We are only adding the ID to make the widgets sortable)-->
+       
+        <!-- /.Left col -->
+        <!-- right col -->
+    </div>
+    <!-- /.row (main row) -->
+</div>
+</body>
+</html>

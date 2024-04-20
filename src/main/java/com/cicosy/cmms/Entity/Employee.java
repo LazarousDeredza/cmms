@@ -1,0 +1,5 @@
+package com.cicosy.cmms.Entity;
+
+public enum Employee {
+  ARTISAN,ADMIN,TECHNICIAN,MANAGER,ACCOUNTANT,STORES,RECEPTIONIST,SECURITY,DRIVER,OTHER
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+    <head>
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <section layout:fragment="header">
+            <h1>
+                Dashboard
+                <small>Control panel</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Dashboard</li>
+            </ol>
+        </section>
+        <div layout:fragment="content">
+
+            <div class="page-header">
+                <legend>Catchment Areas Information</legend>
+            </div>
+            <div class="panel panel-primary panel-table">
+                <table class="table table-striped table-bordered table-list">
+                    <thead>
+                        <tr>
+                            <th>Catchment</th>
+                            <th>Section</th>
+                            <th>Station</th>
+                            <th><em class="fa fa-cog"></em></th>
+                        </tr> 
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="vertical-align: middle;" th:text="Gwayi"></td>
+                            <td style="vertical-align: middle;" th:text="Bulawayo"></td>
+                            <td style="vertical-align: middle;" th:text="Figtree"></td>
+                            <td>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs">
+                                        <span class="glypicon glyphicon glyphicon-edit"></span>
+                                    </button>		                    
+
+                                </a>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs" >
+                                        <span class="glypicon glyphicon glyphicon-trash"></span>
+                                    </button>									
+                                </a>               			                
+                            </td>			
+                        </tr>
+
+
+                        <tr>
+                            <td style="vertical-align: middle;" th:text="Gwayi"></td>
+                            <td style="vertical-align: middle;" th:text="Hwange"></td>
+                            <td style="vertical-align: middle;" th:text="Binga"></td>
+                            <td>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs">
+                                        <span class="glypicon glyphicon glyphicon-edit"></span>
+                                    </button>		                    
+
+                                </a>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs" >
+                                        <span class="glypicon glyphicon glyphicon-trash"></span>
+                                    </button>									
+                                </a>               			                
+                            </td>			
+                        </tr>
+
+
+                        <tr>
+                            <td style="vertical-align: middle;" th:text="Manyame"></td>
+                            <td style="vertical-align: middle;" th:text="Guruve"></td>
+                            <td style="vertical-align: middle;" th:text="Hoya"></td>
+                            <td>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs">
+                                        <span class="glypicon glyphicon glyphicon-edit"></span>
+                                    </button>		                    
+
+                                </a>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs" >
+                                        <span class="glypicon glyphicon glyphicon-trash"></span>
+                                    </button>									
+                                </a>               			                
+                            </td>			
+                        </tr>
+
+
+                        <tr>
+                            <td style="vertical-align: middle;" th:text="Manyame"></td>
+                            <td style="vertical-align: middle;" th:text="Harare"></td>
+                            <td style="vertical-align: middle;" th:text="Acturus"></td>
+                            <td>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs">
+                                        <span class="glypicon glyphicon glyphicon-edit"></span>
+                                    </button>		                    
+
+                                </a>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs" >
+                                        <span class="glypicon glyphicon glyphicon-trash"></span>
+                                    </button>									
+                                </a>               			                
+                            </td>			
+                        </tr>
+
+
+                        <tr>
+                            <td style="vertical-align: middle;" th:text="Mazowe"></td>
+                            <td style="vertical-align: middle;" th:text="Mt_Darwin"></td>
+                            <td style="vertical-align: middle;" th:text="Chiruma"></td>
+                            <td>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs">
+                                        <span class="glypicon glyphicon glyphicon-edit"></span>
+                                    </button>		                    
+
+                                </a>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs" >
+                                        <span class="glypicon glyphicon glyphicon-trash"></span>
+                                    </button>									
+                                </a>               			                
+                            </td>			
+                        </tr>
+
+
+                        <tr>
+                            <td style="vertical-align: middle;" th:text="Mazowe"></td>
+                            <td style="vertical-align: middle;" th:text="Mutoko"></td>
+                            <td style="vertical-align: middle;" th:text="Chitisa"></td>
+                            <td>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs">
+                                        <span class="glypicon glyphicon glyphicon-edit"></span>
+                                    </button>		                    
+
+                                </a>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs" >
+                                        <span class="glypicon glyphicon glyphicon-trash"></span>
+                                    </button>									
+                                </a>               			                
+                            </td>			
+                        </tr>
+
+
+                        <tr>
+                            <td style="vertical-align: middle;" th:text="Runde"></td>
+                            <td style="vertical-align: middle;" th:text="Chivi"></td>
+                            <td style="vertical-align: middle;" th:text="Dadaya"></td>
+                            <td>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs">
+                                        <span class="glypicon glyphicon glyphicon-edit"></span>
+                                    </button>		                    
+
+                                </a>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs" >
+                                        <span class="glypicon glyphicon glyphicon-trash"></span>
+                                    </button>									
+                                </a>               			                
+                            </td>			
+                        </tr>
+
+
+                        <tr>
+                            <td style="vertical-align: middle;" th:text="Runde"></td>
+                            <td style="vertical-align: middle;" th:text="Zaka"></td>
+                            <td style="vertical-align: middle;" th:text="Basera"></td>
+                            <td>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs">
+                                        <span class="glypicon glyphicon glyphicon-edit"></span>
+                                    </button>		                    
+
+                                </a>
+                                <a th:href="@{/}">
+                                    <button type="button" class="btn btn-primary btn-xs" >
+                                        <span class="glypicon glyphicon glyphicon-trash"></span>
+                                    </button>									
+                                </a>               			                
+                            </td>			
+                        </tr>
+                    </tbody>
+                </table>  
+
+            </div>
+        </div>
+    </body>
+</html>
